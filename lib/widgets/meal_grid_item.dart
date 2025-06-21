@@ -7,8 +7,9 @@ import 'package:mealsapp/widgets/meal_item_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealGridItem extends StatelessWidget {
-  const MealGridItem(this.meal, {super.key});
+  const MealGridItem(this.meal, this.onToggleFavorite, {super.key});
   final Meal meal;
+  final void Function(Meal) onToggleFavorite;
 
   String get complexityText {
     return meal.complexity.name[0].toUpperCase() +
@@ -20,13 +21,9 @@ class MealGridItem extends StatelessWidget {
   }
 
   void _mealDetails(context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (ctx) => 
-          MealDetailsScreen(meal)
-        ,
-      ),
-    );
+    Navigator.of(
+      context,
+    ).push(MaterialPageRoute(builder: (ctx) => MealDetailsScreen(meal, onToggleFavorite)));
   }
 
   @override

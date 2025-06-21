@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/data/data.dart';
 import 'package:mealsapp/modals/category.dart';
+import 'package:mealsapp/modals/meal.dart';
 import 'package:mealsapp/screens/meals.dart';
 
 class CategoryGridItem extends StatelessWidget {
   final Category category;
+  final void Function(Meal) onToggleFavorite;
 
-  const CategoryGridItem({required this.category, super.key});
+  const CategoryGridItem({required this.category, required this.onToggleFavorite, super.key});
 
   void _selectCategory(context) {
     final filteredMeals = availableMeals
@@ -18,7 +20,7 @@ class CategoryGridItem extends StatelessWidget {
     }
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => MealsScreen(category.title, filteredMeals),
+        builder: (ctx) => MealsScreen(title: category.title, meals: filteredMeals, onToggleFavorite: onToggleFavorite,),
       ),
     );
   }
