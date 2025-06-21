@@ -27,7 +27,7 @@ const availableMeals = [
   cookingTime: 45,
   complexity: Complexity.medium,
   spice: Spice.medium,
-  labels: ['North Indian', 'Non‑Vegetarian', 'Dinner'],
+  labels: ['North Indian', 'Non-Vegetarian', 'Dinner'],
 ),
 Meal(
   id: 'I2',
@@ -40,7 +40,7 @@ Meal(
   cookingTime: 30,
   complexity: Complexity.easy,
   spice: Spice.mild,
-  labels: ['Vegetarian', 'North Indian', 'Gluten‑Free'],
+  labels: ['Vegetarian', 'North Indian', 'Gluten-Free'],
 ),
 Meal(
   id: 'I3',
@@ -79,7 +79,7 @@ Meal(
   cookingTime: 90,
   complexity: Complexity.hard,
   spice: Spice.hot,
-  labels: ['Non‑Vegetarian', 'Kashmiri', 'Dinner'],
+  labels: ['Non-Vegetarian', 'Kashmiri', 'Dinner'],
 ),
 
 Meal(
@@ -93,7 +93,7 @@ Meal(
   cookingTime: 30,
   complexity: Complexity.medium,
   spice: Spice.hot,
-  labels: ['Szechuan', 'Non‑Vegetarian', 'Dinner'],
+  labels: ['Szechuan', 'Non-Vegetarian', 'Dinner'],
 ),
 Meal(
   id: 'C2',
@@ -106,7 +106,7 @@ Meal(
   cookingTime: 35,
   complexity: Complexity.medium,
   spice: Spice.mild,
-  labels: ['Cantonese', 'Non‑Vegetarian', 'Lunch'],
+  labels: ['Cantonese', 'Non-Vegetarian', 'Lunch'],
 ),
 Meal(
   id: 'C3',
@@ -145,7 +145,7 @@ Meal(
   cookingTime: 45,
   complexity: Complexity.easy,
   spice: Spice.medium,
-  labels: ['Appetizer', 'Street Food', 'Non‑Vegetarian'],
+  labels: ['Appetizer', 'Street Food', 'Non-Vegetarian'],
 ),
 Meal(
   id: 'IT1',
