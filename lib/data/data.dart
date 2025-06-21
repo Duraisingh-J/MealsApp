@@ -15,12 +15,12 @@ const availableCategories = [
   Category(id: 'c10', title: 'French', color: Colors.teal),
 ];
 
-const avaiableMeals = [
+const availableMeals = [
   Meal(
   id: 'I1',
-  categories: ['c1'],
+  category: 'c1',
   title: 'Butter Chicken',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Butter_chicken_%282%29.jpg',
+  imageUrl: 'https://sugarspunrun.com/wp-content/uploads/2025/04/Butter-chicken-1-of-1.jpg',
   ingredients: ['Chicken', 'Butter', 'Tomato puree', 'Cream', 'Garam masala'],
   steps: ['Marinate chicken', 'Cook tomato sauce', 'Add cream and spices', 'Simmer with chicken'],
   calories: '450 kcal',
@@ -31,9 +31,9 @@ const avaiableMeals = [
 ),
 Meal(
   id: 'I2',
-  categories: ['c1'],
+  category: 'c1',
   title: 'Palak Paneer',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Palak_paneer.jpg',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH_DiTDlIMrrunji-AQ9P-qyK445J27gkTtQ&s',
   ingredients: ['Spinach', 'Paneer', 'Onions', 'Garlic', 'Spices'],
   steps: ['Blanch spinach', 'Saute onions+ spices', 'Add spinach', 'Mix in paneer cubes'],
   calories: '360 kcal',
@@ -44,9 +44,9 @@ Meal(
 ),
 Meal(
   id: 'I3',
-  categories: ['c1'],
+  category: 'c1',
   title: 'Masala Dosa',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Masala_Dosa.jpg',
+  imageUrl: 'https://cookingtheglobe.com/wp-content/uploads/2021/07/Masala-Dosa_00004.jpg',
   ingredients: ['Rice', 'Lentils', 'Potatoes', 'Onion', 'Spices'],
   steps: ['Prepare dosa batter', 'Make potato filling', 'Cook dosa', 'Fold with filling'],
   calories: '300 kcal',
@@ -57,9 +57,9 @@ Meal(
 ),
 Meal(
   id: 'I4',
-  categories: ['c1'],
+  category: 'c1',
   title: 'Chole Bhature',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Chole_Bhature.jpg',
+  imageUrl: 'https://www.happy-tummy.co.in/wp-content/uploads/2020/07/Chole-Bhature-scaled.jpg',
   ingredients: ['Chickpeas', 'Flour', 'Yogurt', 'Spices'],
   steps: ['Cook chickpeas', 'Make fried bhature buns', 'Serve together'],
   calories: '550 kcal',
@@ -70,9 +70,9 @@ Meal(
 ),
 Meal(
   id: 'I5',
-  categories: ['c1'],
+  category: 'c1',
   title: 'Rogan Josh',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Rogan_josh_mutton.jpg',
+  imageUrl: 'https://static.toiimg.com/thumb/53192600.cms?width=1200&height=900',
   ingredients: ['Mutton', 'Yogurt', 'Spices', 'Onions'],
   steps: ['Marinate meat', 'Saute onions + spices', 'Add yogurt and simmer'],
   calories: '500 kcal',
@@ -84,9 +84,9 @@ Meal(
 
 Meal(
   id: 'C1',
-  categories: ['c2'],
+  category: 'c2',
   title: 'Kung Pao Chicken',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Kung_Pao_Chicken.jpg',
+  imageUrl: 'https://www.seriouseats.com/thmb/BDJ9J1TKURp-WzODtAmxbrdg_Zg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2010__06__2021-02-12-Real-Deal-Kung-Pao-Chicken-MHOM-21-d8de1c4b127a4dc7b6d9e43e4b18a9e8.jpg',
   ingredients: ['Chicken', 'Peanuts', 'Chilies', 'Soy sauce', 'Garlic'],
   steps: ['Marinate chicken', 'Stir-fry peanuts and chilies', 'Add sauce + chicken', 'Toss everything'],
   calories: '480 kcal',
@@ -97,9 +97,9 @@ Meal(
 ),
 Meal(
   id: 'C2',
-  categories: ['c2'],
+  category: 'c2',
   title: 'Sweet and Sour Pork',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Sweet_and_sour_pork.jpg',
+  imageUrl: 'https://cdn.sanity.io/images/2r0kdewr/production/0bc6f529c1200c84a8465d9317c3029898a4d4fa-1500x844.jpg',
   ingredients: ['Pork', 'Pineapple', 'Bell peppers', 'Sweet‑sour sauce'],
   steps: ['Fry pork', 'Stir-fry vegetables', 'Add sauce and pineapple chunks'],
   calories: '520 kcal',
@@ -110,9 +110,9 @@ Meal(
 ),
 Meal(
   id: 'C3',
-  categories: ['c2'],
+  category: 'c2',
   title: 'Mapo Tofu',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Mapo_doufu_%28%E9%99%8D%E5%93%81%E7%89%87%E7%85%A7%29.jpg',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOt3YCkKhsbzyouIvJXTR3RultIbYmqbRsNw&s',
   ingredients: ['Tofu', 'Ground pork', 'Chili bean paste', 'Sichuan pepper'],
   steps: ['Cook pork + paste', 'Add tofu cubes', 'Simmer with spices'],
   calories: '350 kcal',
@@ -123,9 +123,9 @@ Meal(
 ),
 Meal(
   id: 'C4',
-  categories: ['c2'],
+  category: 'c2',
   title: 'Egg Fried Rice',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Egg_fried_rice.jpg',
+  imageUrl: 'https://www.pantsdownapronson.com/wp-content/uploads/chicken-fried-rice-recipe-main.jpg',
   ingredients: ['Rice', 'Eggs', 'Carrots', 'Peas', 'Soy sauce'],
   steps: ['Scramble eggs', 'Stir-fry veggies + rice', 'Season with soy sauce'],
   calories: '400 kcal',
@@ -136,9 +136,9 @@ Meal(
 ),
 Meal(
   id: 'C5',
-  categories: ['c2'],
+  category: 'c2',
   title: 'Dumplings',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0c/Jiaozi.JPG',
+  imageUrl: 'https://twoplaidaprons.com/wp-content/uploads/2020/05/Chinese-pork-dumplings-picking-up-a-dumpling-with-chopsticks-500x500.jpg',
   ingredients: ['Dough wrappers', 'Ground pork', 'Cabbage', 'Ginger'],
   steps: ['Prepare filling', 'Wrap dumplings', 'Steam or fry'],
   calories: '300 kcal',
@@ -149,9 +149,9 @@ Meal(
 ),
 Meal(
   id: 'IT1',
-  categories: ['c3'],
+  category: 'c3',
   title: 'Margherita Pizza',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Supreme_pizza.jpg/800px-Supreme_pizza.jpg',
+  imageUrl: 'https://www.heart.org/-/media/AHA/Recipe/Recipe-Images/Classic-Margherita-Pizza-with-Whole-Wheat-Pizza-Crust.jpg?h=922&w=1200&sc_lang=en&hash=BC11D7BCD33CFAD57790BB8779E746CF',
   ingredients: [
     'Pizza dough',
     'Tomato sauce',
@@ -167,7 +167,7 @@ Meal(
     'Bake for 10–15 minutes.',
     'Top with fresh basil and olive oil.'
   ],
-  calories: '250 per slice',
+  calories: '250 kcal per slice',
   cookingTime: 20,
   complexity: Complexity.easy,
   spice: Spice.mild,
@@ -176,9 +176,9 @@ Meal(
 
 Meal(
   id: 'IT2',
-  categories: ['c3'],
+  category: 'c3',
   title: 'Spaghetti Carbonara',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Spaghetti_alla_Carbonara_%28cropped%29.jpg/800px-Spaghetti_alla_Carbonara_%28cropped%29.jpg',
+  imageUrl: 'https://www.chewoutloud.com/wp-content/uploads/2023/09/Spaghetti-Carbonara-vertical.jpg',
   ingredients: [
     'Spaghetti',
     'Eggs',
@@ -203,9 +203,9 @@ Meal(
 
 Meal(
   id: 'IT3',
-  categories: ['c3'],
+  category: 'c3',
   title: 'Lasagna',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Lasagna_%281%29.jpg/800px-Lasagna_%281%29.jpg',
+  imageUrl: 'https://assets.bonappetit.com/photos/656f48d75b552734225041ba/1:1/w_3129,h_3129,c_limit/20231120-WEB-Lasanga-6422.jpg',
   ingredients: [
     'Lasagna noodles',
     'Ground beef',
@@ -232,9 +232,9 @@ Meal(
 
 Meal(
   id: 'IT4',
-  categories: ['c3'],
+  category: 'c3',
   title: 'Risotto alla Milanese',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Risotto_alla_Milanese_-_La_Cucina_Italiana_%28cropped%29.jpg/800px-Risotto_alla_Milanese_-_La_Cucina_Italiana_%28cropped%29.jpg',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ8HC6HMLhBnUUcBbE1smE5tKpo0BMtUdz4w&s',
   ingredients: [
     'Arborio rice',
     'Saffron threads',
@@ -260,9 +260,9 @@ Meal(
 
 Meal(
   id: 'IT5',
-  categories: ['c3'],
+  category: 'c3',
   title: 'Tiramisu',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Tiramisu_-_Raffaele_di_Meglio.jpg/800px-Tiramisu_-_Raffaele_di_Meglio.jpg',
+  imageUrl: 'https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2024/09/THUMB-VIDEO-2_rev1-56.jpeg',
   ingredients: [
     'Mascarpone cheese',
     'Eggs',
@@ -286,9 +286,9 @@ Meal(
 ),
 Meal(
   id: 'M1',
-  categories: ['c4'],
+  category: 'c4',
   title: 'Tacos al Pastor',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/92/Tacos_al_Pastor.jpg',
+  imageUrl: 'https://thestayathomechef.com/wp-content/uploads/2024/04/Classic-Tacos-Al-Pastor_Square-1.jpg',
   ingredients: [
     'Pork shoulder',
     'Pineapple',
@@ -315,9 +315,9 @@ Meal(
 
 Meal(
   id: 'M2',
-  categories: ['c4'],
+  category: 'c4',
   title: 'Enchiladas Rojas',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Enchiladas_rojas.jpg',
+  imageUrl: 'https://www.mexicoenmicocina.com/wp-content/uploads/2013/11/Enchiladas-rojas-2.jpg',
   ingredients: [
     'Corn tortillas',
     'Chicken',
@@ -341,9 +341,9 @@ Meal(
 
 Meal(
   id: 'M3',
-  categories: ['c4'],
+  category: 'c4',
   title: 'Chiles en Nogada',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/70/Chiles_en_nogada.jpg',
+  imageUrl: 'https://www.isabeleats.com/wp-content/uploads/2023/08/chiles-en-nogada-small-7.jpg',
   ingredients: [
     'Poblano peppers',
     'Ground meat',
@@ -367,9 +367,9 @@ Meal(
 
 Meal(
   id: 'M4',
-  categories: ['c4'],
+  category: 'c4',
   title: 'Guacamole with Chips',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Guacamole_01.jpg',
+  imageUrl: 'https://cdn11.bigcommerce.com/s-5ljyj9oebs/images/stencil/600x600/products/9445/26850/P111023185929_1__47634.1707145448.jpg?c=2',
   ingredients: [
     'Avocados',
     'Tomatoes',
@@ -394,9 +394,9 @@ Meal(
 
 Meal(
   id: 'M5',
-  categories: ['c4'],
+  category: 'c4',
   title: 'Pozole Rojo',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Pozole_Rojo.jpg',
+  imageUrl: 'https://somuchfoodblog.com/wp-content/uploads/2024/10/Pork-Pozole-Rojo_LowRes-023.jpg',
   ingredients: [
     'Hominy corn',
     'Pork shoulder',
@@ -420,9 +420,9 @@ Meal(
 
 Meal(
   id: 'M6',
-  categories: ['c4'],
+  category: 'c4',
   title: 'Quesadillas',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Quesadilla.jpg',
+  imageUrl: 'https://cdn.loveandlemons.com/wp-content/uploads/2024/01/quesadilla.jpg',
   ingredients: [
     'Flour tortillas',
     'Cheddar cheese',
@@ -442,9 +442,9 @@ Meal(
 ),
 Meal(
   id: 'J1',
-  categories: ['c5'],
+  category: 'c5',
   title: 'Sushi',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg',
+  imageUrl: 'https://www.justonecookbook.com/wp-content/uploads/2020/01/Sushi-Rolls-Maki-Sushi-%E2%80%93-Hosomaki-1106-II.jpg',
   ingredients: [
     'Sushi rice',
     'Nori (seaweed)',
@@ -469,9 +469,9 @@ Meal(
 
 Meal(
   id: 'J2',
-  categories: ['c5'],
+  category: 'c5',
   title: 'Ramen',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Tonkotsu_ramen_by_motofuku_in_Tokyo.jpg',
+  imageUrl: 'https://www.kikkoman.eu/fileadmin/_processed_/f/0/csm_1103-recipe-page-Spicy-Kimchi-Ramen-with-Pork_desktop_c8dc4e51e8.jpg',
   ingredients: [
     'Ramen noodles',
     'Pork broth',
@@ -496,9 +496,9 @@ Meal(
 
 Meal(
   id: 'J3',
-  categories: ['c5'],
+  category: 'c5',
   title: 'Tempura',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Tempura-shrimp01.jpg',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQHDS4k_XMABZYxPrA05U30Q20YXqsf_CqQA&s',
   ingredients: [
     'Shrimp or vegetables',
     'Tempura batter (flour, egg, cold water)',
@@ -520,9 +520,9 @@ Meal(
 
 Meal(
   id: 'J4',
-  categories: ['c5'],
+  category: 'c5',
   title: 'Okonomiyaki',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Okonomiyaki_001.jpg',
+  imageUrl: 'https://japanesetaste.com/cdn/shop/articles/how-to-make-osaka-style-okonomiyaki-at-home-japanese-savory-pancake-japanese-taste.jpg?v=1737980567&width=5760',
   ingredients: [
     'Cabbage',
     'Flour',
@@ -547,9 +547,9 @@ Meal(
 
 Meal(
   id: 'J5',
-  categories: ['c5'],
+  category: 'c5',
   title: 'Miso Soup',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Miso_Soup_001.jpg',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNnRPHEchIpESvNmbmegQwrx4EQ-66fk9mRA&s',
   ingredients: [
     'Miso paste',
     'Dashi (soup stock)',
@@ -571,9 +571,9 @@ Meal(
 ),
 Meal(
   id: 'T1',
-  categories: ['c6'],
+  category: 'c6',
   title: 'Pad Thai',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Pad_Thai_kung_Chang_Khien_street_stall.jpg',
+  imageUrl: 'https://inquiringchef.com/wp-content/uploads/2023/02/Authentic-Pad-Thai_square-1908.jpg',
   ingredients: [
     'Rice noodles',
     'Shrimp or chicken',
@@ -604,9 +604,9 @@ Meal(
 
 Meal(
   id: 'T2',
-  categories: ['c6'],
+  category: 'c6',
   title: 'Tom Yum Goong',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Tom_Yum_Goong.jpg',
+  imageUrl: 'https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/23FC4FB8-014B-45B5-A70B-C4EEE033FAD9/Derivates/14daddd1-cde7-4812-8902-7b9c9fe60ced.jpg',
   ingredients: [
     'Shrimp',
     'Lemongrass',
@@ -633,9 +633,9 @@ Meal(
 
 Meal(
   id: 'T3',
-  categories: ['c6'],
+  category: 'c6',
   title: 'Green Curry (Gaeng Keow Wan)',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Thai_green_curry_chicken.jpg',
+  imageUrl: 'https://images.squarespace-cdn.com/content/v1/60152ef33c15960033d3b095/1612106925691-BWIA2JOQDJ4HZXEAU370/gaeng+keo+wan+keowan+green+curry+with+chicken.jpg?format=1000w',
   ingredients: [
     'Green curry paste',
     'Coconut milk',
@@ -662,9 +662,9 @@ Meal(
 
 Meal(
   id: 'T4',
-  categories: ['c6'],
+  category: 'c6',
   title: 'Som Tum (Papaya Salad)',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Som_tum_thai.JPG',
+  imageUrl: 'https://c.ndtvimg.com/1hkfbvu_som-tam-salad_625x300_04_September_18.jpg',
   ingredients: [
     'Green papaya',
     'Tomatoes',
@@ -691,9 +691,9 @@ Meal(
 
 Meal(
   id: 'T5',
-  categories: ['c6'],
+  category: 'c6',
   title: 'Massaman Curry',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Massaman_beef_curry.jpg',
+  imageUrl: 'https://www.thai-food-online.co.uk/cdn/shop/files/masaman-curry-recipe.jpg?v=1614285805',
   ingredients: [
     'Massaman curry paste',
     'Coconut milk',
@@ -721,9 +721,9 @@ Meal(
 
 Meal(
   id: 'T6',
-  categories: ['c6'],
+  category: 'c6',
   title: 'Thai Basil Chicken (Pad Kra Pao)',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Krapao_kai.jpg',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR69wU0unUkSPsmzvwjmUdrkP7jSPWoqGDhsA&s',
   ingredients: [
     'Chicken',
     'Garlic',
@@ -750,9 +750,9 @@ Meal(
 
 Meal(
   id: 'T7',
-  categories: ['c6'],
+  category: 'c6',
   title: 'Mango Sticky Rice',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Khao_Niao_Mamuang_Mango_Sticky_Rice.jpg',
+  imageUrl: 'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/tk%2Fphoto%2F2025%2F04-2025%2F2025-03-mango-sticky-rice%2Fmango-sticky-rice-336',
   ingredients: [
     'Glutinous rice',
     'Coconut milk',
@@ -776,9 +776,9 @@ Meal(
 ),
 Meal(
   id: 'A1',
-  categories: ['c7'],
+  category: 'c7',
   title: 'Cheeseburger',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Cheeseburger.png',
+  imageUrl: 'https://www.recipetineats.com/tachyon/2022/08/Stack-of-cheeseburgers.jpg',
   ingredients: ['Ground beef', 'Cheddar cheese', 'Burger buns', 'Lettuce', 'Tomato', 'Onion', 'Pickles', 'Ketchup', 'Mustard'],
   steps: [
     'Shape ground beef into patties.',
@@ -796,9 +796,9 @@ Meal(
 
 Meal(
   id: 'A2',
-  categories: ['c7'],
+  category: 'c7',
   title: 'Buffalo Wings',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Buffalo_wings-01.jpg',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ-gARC7X8KVnzBlbZfWiNhaj2GZ7Ohtd5rQ&s',
   ingredients: ['Chicken wings', 'Butter', 'Hot sauce', 'Garlic powder', 'Salt', 'Pepper'],
   steps: [
     'Fry or bake the chicken wings until crispy.',
@@ -815,9 +815,9 @@ Meal(
 
 Meal(
   id: 'A3',
-  categories: ['c7'],
+  category: 'c7',
   title: 'Macaroni and Cheese',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Original_Mac_n_Cheese.jpg',
+  imageUrl: 'https://www.kitchensanctuary.com/wp-content/uploads/2023/09/Four-cheese-mac-n-cheese-with-bacon-square-FS.jpg',
   ingredients: ['Elbow macaroni', 'Butter', 'Milk', 'Flour', 'Cheddar cheese', 'Salt', 'Pepper'],
   steps: [
     'Cook macaroni until al dente.',
@@ -835,9 +835,9 @@ Meal(
 
 Meal(
   id: 'A4',
-  categories: ['c7'],
+  category: 'c7',
   title: 'BBQ Ribs',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Bbq_ribs_at_the_Meat_Market.jpg',
+  imageUrl: 'https://www.allrecipes.com/thmb/IWVelWahUb2gQxixWJC2N-HXp0k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/22469-Barbecue-Ribs-ddmfs-2x1-210-e799db142f594b00bb317bb357d0971c.jpg',
   ingredients: ['Pork ribs', 'BBQ sauce', 'Brown sugar', 'Garlic powder', 'Paprika', 'Salt', 'Pepper'],
   steps: [
     'Rub ribs with spices.',
@@ -854,9 +854,9 @@ Meal(
 
 Meal(
   id: 'A5',
-  categories: ['c7'],
+  category: 'c7',
   title: 'Clam Chowder',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Clam_Chowder_-_Portland%2C_OR.jpg',
+  imageUrl: 'https://www.thecountrycook.net/wp-content/uploads/2023/08/thumbnail-Creamy-Clam-Chowder-scaled.jpg',
   ingredients: ['Clams', 'Potatoes', 'Onion', 'Celery', 'Cream', 'Butter', 'Flour', 'Salt', 'Pepper'],
   steps: [
     'Sauté onion and celery in butter.',
@@ -873,9 +873,9 @@ Meal(
 ),
 Meal(
   id: 'K1',
-  categories: ['c8'],
+  category: 'c8',
   title: 'Bibimbap',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Bibimbap_in_Jeonju.jpg',
+  imageUrl: 'https://www.siftandsimmer.com/wp-content/uploads/2023/05/bibimbap-featured.jpg',
   ingredients: [
     'Cooked rice',
     'Carrots',
@@ -904,9 +904,9 @@ Meal(
 
 Meal(
   id: 'K2',
-  categories: ['c8'],
+  category: 'c8',
   title: 'Kimchi Jjigae (Kimchi Stew)',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/86/Kimchi_jjigae.jpg',
+  imageUrl: 'https://takestwoeggs.com/wp-content/uploads/2024/03/Kimchi-Jjigae-Kimchi-Stew-Takestwoeggs-3.jpg',
   ingredients: [
     'Kimchi',
     'Pork belly',
@@ -933,9 +933,9 @@ Meal(
 
 Meal(
   id: 'K3',
-  categories: ['c8'],
+  category: 'c8',
   title: 'Tteokbokki',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Tteokbokki_by_cowyeow.jpg',
+  imageUrl: 'https://www.bhg.com/thmb/mE-LNUHyjIGobYSFm2V1pHw951k=/4000x0/filters:no_upscale():strip_icc()/Tteokbokki-Spicy-Rice-Cakes-Hero-6979305-6846a52bb31b4d928d40e7a5cdf4ea23.jpg',
   ingredients: [
     'Rice cakes (tteok)',
     'Fish cakes',
@@ -962,9 +962,9 @@ Meal(
 
 Meal(
   id: 'K4',
-  categories: ['c8'],
+  category: 'c8',
   title: 'Samgyeopsal (Grilled Pork Belly)',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/db/Korean.Samgyeopsal-01.jpg',
+  imageUrl: 'https://thesubversivetable.com/wp-content/uploads/2024/05/Samgyeopsal-Gui-retake-16-scaled.jpg',
   ingredients: [
     'Pork belly slices',
     'Garlic',
@@ -989,9 +989,9 @@ Meal(
 
 Meal(
   id: 'K5',
-  categories: ['c8'],
+  category: 'c8',
   title: 'Japchae (Glass Noodle Stir Fry)',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Japchae.jpg',
+  imageUrl: 'https://www.allrecipes.com/thmb/CE3Y3795Oktz9oZMRz5Zs8T1-z8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/196879-Jap-Chae-Korean-Glass-Noodles-ddmfs-2x1-147-97a3f1c5326b466687b08999b84acabd.jpg',
   ingredients: [
     'Glass noodles',
     'Beef strips',
@@ -1017,9 +1017,9 @@ Meal(
 ),
 Meal(
   id: 'S1',
-  categories: ['c9'],
+  category: 'c9',
   title: 'Paella',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Paella_de_marisco_01.jpg',
+  imageUrl: 'https://media-cdn2.greatbritishchefs.com/media/ifkkiv0g/img64614.jpg',
   ingredients: [
     '2 cups Bomba rice',
     '1/2 lb shrimp',
@@ -1049,9 +1049,9 @@ Meal(
 ),
 Meal(
   id: 'S2',
-  categories: ['c9'],
+  category: 'c9',
   title: 'Gazpacho',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Gazpacho_Andaluz.jpg',
+  imageUrl: 'https://www.artandthekitchen.com/wp-content/uploads/2023/09/gazpacho-soup-3166.jpg',
   ingredients: [
     '6 ripe tomatoes',
     '1 cucumber',
@@ -1076,9 +1076,9 @@ Meal(
 ),
 Meal(
   id: 'S3',
-  categories: ['c9'],
+  category: 'c9',
   title: 'Tortilla Española',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Tortilla_de_patatas_con_cebolla_y_calabac%C3%ADn.jpg',
+  imageUrl: 'https://www.dopenkitchen.com.sg/wp-content/uploads/2020/06/Tortilla-Espanola-500x500.jpg',
   ingredients: [
     '4 large potatoes',
     '1 onion',
@@ -1102,9 +1102,9 @@ Meal(
 ),
 Meal(
   id: 'S4',
-  categories: ['c9'],
+  category: 'c9',
   title: 'Patatas Bravas',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Patatas_bravas.jpg',
+  imageUrl: 'https://res.cloudinary.com/tienda-com/image/upload/f_auto/q_auto/c_fill,w_742/dpr_2.0/v1/recipes/patatas-bravas',
   ingredients: [
     '4 potatoes',
     '1 cup tomato sauce',
@@ -1127,9 +1127,9 @@ Meal(
 ),
 Meal(
   id: 'S5',
-  categories: ['c9'],
+  category: 'c9',
   title: 'Churros',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Churros_Madrid.jpg',
+  imageUrl: 'https://www.recipetineats.com/tachyon/2016/08/Churros_9-SQ.jpg',
   ingredients: [
     '1 cup flour',
     '1 cup water',
@@ -1154,9 +1154,9 @@ Meal(
 ),
 Meal(
   id: 'F1',
-  categories: ['c10'],
+  category: 'c10',
   title: 'Coq au Vin',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Coq_au_vin_-_Chicken_cooked_in_wine.jpg',
+  imageUrl: 'https://www.sipandfeast.com/wp-content/uploads/2023/10/coq-au-vin-process-snippet-3-500x500.jpg',
   ingredients: [
     '1 whole chicken, cut into pieces',
     '2 cups red wine',
@@ -1187,9 +1187,9 @@ Meal(
 
 Meal(
   id: 'F2',
-  categories: ['c10'],
+  category: 'c10',
   title: 'Ratatouille',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Confit_Byaldi.jpg',
+  imageUrl: 'https://delishglobe.com/wp-content/uploads/2024/09/Ratatouille-1.png',
   ingredients: [
     '1 eggplant',
     '1 zucchini',
@@ -1217,9 +1217,9 @@ Meal(
 
 Meal(
   id: 'F3',
-  categories: ['c10'],
+  category: 'c10',
   title: 'Croque Monsieur',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Croque-monsieur.jpg',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8wD5YPjSYpAeHIwCX965pIQGlB78xMK1ZJQ&s',
   ingredients: [
     '2 slices of bread',
     '2 slices of ham',
@@ -1243,9 +1243,9 @@ Meal(
 
 Meal(
   id: 'F4',
-  categories: ['c10'],
+  category: 'c10',
   title: 'Bouillabaisse',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Bouillabaisse.jpg',
+  imageUrl: 'https://www.whats4eats.com/wp-content/uploads/2023/09/soups-bouillabaisse-ccnull.de-Marco-Verch-1099981-4x3-1.webp',
   ingredients: [
     'Variety of white fish (cod, haddock)',
     'Mussels',
@@ -1274,9 +1274,9 @@ Meal(
 
 Meal(
   id: 'F5',
-  categories: ['c10'],
+  category: 'c10',
   title: 'Crème Brûlée',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Creme_Brulee.jpg',
+  imageUrl: 'https://www.nordicware.com/wp-content/uploads/2023/08/Strawberry-Creme-Brule5472-KC_1K.jpg',
   ingredients: [
     '2 cups heavy cream',
     '5 egg yolks',

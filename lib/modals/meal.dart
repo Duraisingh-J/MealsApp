@@ -4,7 +4,7 @@ enum Spice { none, mild, medium, hot }
 
 class Meal {
   final String id;
-  final List<String> categories;
+  final String category;
   final String title;
   final String imageUrl;
   final List<String> ingredients;
@@ -17,7 +17,7 @@ class Meal {
 
   const Meal({
     required this.id,
-    required this.categories,
+    required this.category,
     required this.title,
     required this.imageUrl,
     required this.ingredients,
@@ -28,4 +28,9 @@ class Meal {
     required this.spice,
     required this.labels,
   });
+
+  @override
+  String toString() {
+    return 'Meal(title : $title, imageUrl : $imageUrl)';
+  }
 }
