@@ -58,9 +58,7 @@ class _TabsScreen extends State<TabsScreen> {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
       final result = await Navigator.of(context).push<Map<Filter, bool>>(
-        MaterialPageRoute(
-          builder: (ctx) => FiltersScreen(_selectedFilters),
-        ),
+        MaterialPageRoute(builder: (ctx) => FiltersScreen(_selectedFilters)),
       );
 
       setState(() {
@@ -84,7 +82,7 @@ class _TabsScreen extends State<TabsScreen> {
           !meal.labels.contains('Dessert')) {
         return false;
       }
-      if (_selectedFilters[Filter.soup]! && !meal.labels.contains('')) {
+      if (_selectedFilters[Filter.soup]! && !meal.labels.contains('Soup')) {
         return false;
       }
       return true;
@@ -106,19 +104,111 @@ class _TabsScreen extends State<TabsScreen> {
       appBar: AppBar(title: Text(activePageTitle)),
       drawer: MainDrawer(_setScreen),
       body: activePage,
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) {
+
+      bottomNavigationBar: NavigationBar(
+        destinations: [
+          NavigationDestination(
+            icon: Icon(Icons.set_meal_outlined),
+            label: 'Categories',
+            selectedIcon: Icon(Icons.set_meal),
+          ),
+          NavigationDestination(
+            icon: Badge(label: Text('2'),child: Icon(Icons.star_border)),
+            label: 'Favorites',
+            selectedIcon: Icon(Icons.star),
+          ),
+        ],
+        onDestinationSelected: (index) {
           _selectPage(index);
         },
-        currentIndex: _selectedPageIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.set_meal),
-            label: 'Categories',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Favorites'),
-        ],
+        indicatorColor: Theme.of(context).colorScheme.primaryContainer,
+        selectedIndex: _selectedPageIndex,
       ),
+      // bottomNavigationBar: ConvexAppBar(
+      //   style: TabStyle.custom,
+
+      //   onTap: (index) {
+      //     _selectPage(index);
+      //   },
+      //   backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+      //   activeColor: Theme.of(context).colorScheme.primary,
+      //   initialActiveIndex: _selectedPageIndex,
+      //   items: [
+      //     TabItem(
+      //       icon: Icon(Icons.set_meal_outlined),
+      //       activeIcon: Icon(Icons.set_meal),
+      //       title: 'Categories',
+
+      //     ),
+      //     TabItem(icon: Icon(Icons.star_outline), activeIcon: Icon(Icons.star), title: 'Favorites'),
+      //   ],
+      // ),
+      // bottomNavigationBar: SalomonBottomBar(
+      //   currentIndex: _selectedPageIndex,
+      //   onTap: (index) {
+      //     _selectPage(index);
+      //   },
+      //   backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
+      //   items: [
+      //     SalomonBottomBarItem(
+      //       icon: Icon(Icons.set_meal_outlined),
+      //       activeIcon: Icon(Icons.set_meal),
+      //       title: Text('Categories'),
+      //       selectedColor: Theme.of(context).colorScheme.primary,
+
+      //     ),
+      //     SalomonBottomBarItem(icon: Icon(Icons.star_border), activeIcon: Icon(Icons.star),title: Text('Favorites'), selectedColor: Theme.of(context).colorScheme.primary
+      //     )
+      //   ],
+
+      // ),
+      // bottomNavigationBar: GNav(
+      //   selectedIndex: _selectedPageIndex,
+      //   gap: 10,
+      //   activeColor: Theme.of(context).colorScheme.primary,
+      //   backgroundColor: Theme.of(context).colorScheme.onPrimary,
+      //   onTabChange: (index) {
+      //     _selectPage(index);
+      //   },
+      //   tabs: [
+      //     GButton(icon: Icons.home, text: 'Home'),
+      //     GButton(icon: Icons.set_meal, text: 'Categories'),
+      //     GButton(icon: Icons.star, text: 'Favorites'),
+      //   ],
+      // ),
+      // bottomNavigationBar: BottomBarWithSheet(
+      //   bottomBarTheme: BottomBarTheme(
+      //     itemTextStyle: TextStyle(
+      //       color: Theme.of(context).colorScheme.primaryContainer,
+      //     ),
+      //     selectedItemTextStyle: TextStyle(
+      //       color: Theme.of(context).colorScheme.primary,
+      //     ),
+      //   ),
+      //   controller: _controller,
+      //   sheetChild: Container(
+      //     height: 200,
+      //     alignment: Alignment.center,
+      //     child: Text('Sheet Container', style: TextStyle(
+      //       color: Theme.of(context).colorScheme.primaryContainer,
+      //     ),),
+      //   ),
+
+      //   mainActionButtonTheme: MainActionButtonTheme(
+      //     color: Theme.of(context).colorScheme.primary,
+      //     icon: Icon(Icons.add),
+      //   ),
+      //   items: [
+      //     BottomBarWithSheetItem(icon: Icons.set_meal, label: 'Categories'),
+      //     BottomBarWithSheetItem(icon: Icons.star, label: 'Favorites'),
+      //   ],
+      //   onSelectItem: (index) {
+      //     _selectPage(index);
+      //     if (_controller.isOpened) {
+      //       _controller.closeSheet();
+      //     }
+      //   },
+      // ),
     );
   }
 }
