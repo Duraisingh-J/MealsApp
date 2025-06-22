@@ -3,9 +3,8 @@ import 'package:mealsapp/modals/meal.dart';
 import 'package:mealsapp/widgets/meal_grid_item.dart';
 
 class MealsScreen extends StatelessWidget {
-  const MealsScreen({this.title, required this.meals,  required this.onToggleFavorite, super.key});
+  const MealsScreen({this.title, required this.meals, super.key});
 
-  final void Function(Meal) onToggleFavorite;
 
   final String? title;
   final List<Meal> meals;
@@ -22,7 +21,7 @@ class MealsScreen extends StatelessWidget {
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
           ),
-          children: [for (final meal in meals) MealGridItem(meal, onToggleFavorite)],
+          children: [for (final meal in meals) MealGridItem(meal)],
         ),
       ),
     );

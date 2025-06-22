@@ -43,6 +43,8 @@ dependencies:
   salomon_bottom_bar: ^3.3.2
   google_nav_bar: ^5.0.7
   bottom_bar_with_sheet: ^2.4.0
+  riverpod: ^2.6.1
+  flutter_riverpod: ^2.6.1
   
 
 

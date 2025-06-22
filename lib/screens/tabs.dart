@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mealsapp/data/data.dart';
-import 'package:mealsapp/modals/meal.dart';
 import 'package:mealsapp/screens/categories.dart';
 import 'package:mealsapp/screens/filters.dart';
 import 'package:mealsapp/screens/meals.dart';
 import 'package:mealsapp/widgets/main_drawer.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:mealsapp/provider/favorite_provider.dart';
+import 'package:mealsapp/provider/filters_provider.dart';
 
 const kInitilaFilters = {
   Filter.nonVeg: false,
@@ -13,42 +14,16 @@ const kInitilaFilters = {
   Filter.soup: false,
 };
 
-class TabsScreen extends StatefulWidget {
+class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
 
   @override
-  State<StatefulWidget> createState() => _TabsScreen();
+  ConsumerState<TabsScreen> createState() => _TabsScreen();
 }
 
-class _TabsScreen extends State<TabsScreen> {
+class _TabsScreen extends ConsumerState<TabsScreen> {
   int _selectedPageIndex = 0;
-  final List<Meal> _favoriteMeals = [];
   int favCount = 0;
-  Map<Filter, bool> _selectedFilters = kInitilaFilters;
-
-  void _showInfoMessage(String msg) {
-    ScaffoldMessenger.of(context).clearSnackBars();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(duration: Duration(milliseconds: 500), content: Text(msg)),
-    );
-  }
-
-  void _toggleMealFavoriteStatus(Meal meal) {
-    final isExisting = _favoriteMeals.contains(meal);
-
-    if (isExisting) {
-      setState(() {
-        _favoriteMeals.remove(meal);
-      });
-      _showInfoMessage('No longer Favorite');
-    } else {
-      setState(() {
-        _favoriteMeals.add(meal);
-        favCount++;
-      });
-      _showInfoMessage('Marked as Favorite');
-    }
-  }
 
   void _selectPage(int index) {
     setState(() {
@@ -56,50 +31,25 @@ class _TabsScreen extends State<TabsScreen> {
     });
   }
 
-  void _setScreen(String identifier) async {
+  void _setScreen(String identifier) {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
-      final result = await Navigator.of(context).push<Map<Filter, bool>>(
-        MaterialPageRoute(builder: (ctx) => FiltersScreen(_selectedFilters)),
+      Navigator.of(context).push<Map<Filter, bool>>(
+        MaterialPageRoute(builder: (ctx) => FiltersScreen()),
       );
-
-      setState(() {
-        _selectedFilters = result ?? kInitilaFilters;
-      });
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final filteredMeals = availableMeals.where((meal) {
-      if (_selectedFilters[Filter.nonVeg]! &&
-          !meal.labels.contains('Non-Vegetarian')) {
-        return false;
-      }
-      if (_selectedFilters[Filter.veg]! &&
-          !meal.labels.contains('Vegetarian')) {
-        return false;
-      }
-      if (_selectedFilters[Filter.dessert]! &&
-          !meal.labels.contains('Dessert')) {
-        return false;
-      }
-      if (_selectedFilters[Filter.soup]! && !meal.labels.contains('Soup')) {
-        return false;
-      }
-      return true;
-    }).toList();
-    Widget activePage = CategoriesScreen(
-      filteredMeals: filteredMeals,
-      onToggleFavorite: _toggleMealFavoriteStatus,
-    );
+    final filteredMeals = ref.watch(filteredMealsProvider);
+
+    Widget activePage = CategoriesScreen(filteredMeals: filteredMeals);
     String activePageTitle = 'Categories';
 
     if (_selectedPageIndex == 1) {
-      activePage = MealsScreen(
-        meals: _favoriteMeals,
-        onToggleFavorite: _toggleMealFavoriteStatus,
-      );
+      final favoriteMeals = ref.watch(favoriteMealsProvider);
+      activePage = MealsScreen(meals: favoriteMeals);
       activePageTitle = 'Your Favorites';
       favCount = 0;
     }
@@ -116,10 +66,12 @@ class _TabsScreen extends State<TabsScreen> {
             selectedIcon: Icon(Icons.set_meal),
           ),
           NavigationDestination(
-            icon: favCount == 0? Icon(Icons.star_border): Badge(
-              label: Text('$favCount'),
-              child: Icon(Icons.star_border),
-            ),
+            icon: favCount == 0
+                ? Icon(Icons.star_border)
+                : Badge(
+                    label: Text('$favCount'),
+                    child: Icon(Icons.star_border),
+                  ),
             label: 'Favorites',
             selectedIcon: Icon(Icons.star),
           ),

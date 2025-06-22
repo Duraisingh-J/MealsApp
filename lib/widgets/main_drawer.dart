@@ -15,9 +15,10 @@ class MainDrawer extends StatelessWidget {
               gradient: LinearGradient(
                 colors: [
                   Theme.of(context).colorScheme.primaryContainer,
-                  // ignore: deprecated_member_use
+
                   Theme.of(
                     context,
+                    // ignore: deprecated_member_use
                   ).colorScheme.primaryContainer.withOpacity(0.9),
                 ],
                 begin: Alignment.topLeft,
