@@ -23,6 +23,7 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreen extends State<TabsScreen> {
   int _selectedPageIndex = 0;
   final List<Meal> _favoriteMeals = [];
+  int favCount = 0;
   Map<Filter, bool> _selectedFilters = kInitilaFilters;
 
   void _showInfoMessage(String msg) {
@@ -43,6 +44,7 @@ class _TabsScreen extends State<TabsScreen> {
     } else {
       setState(() {
         _favoriteMeals.add(meal);
+        favCount++;
       });
       _showInfoMessage('Marked as Favorite');
     }
@@ -99,6 +101,7 @@ class _TabsScreen extends State<TabsScreen> {
         onToggleFavorite: _toggleMealFavoriteStatus,
       );
       activePageTitle = 'Your Favorites';
+      favCount = 0;
     }
     return Scaffold(
       appBar: AppBar(title: Text(activePageTitle)),
@@ -113,7 +116,10 @@ class _TabsScreen extends State<TabsScreen> {
             selectedIcon: Icon(Icons.set_meal),
           ),
           NavigationDestination(
-            icon: Badge(label: Text('2'),child: Icon(Icons.star_border)),
+            icon: favCount == 0? Icon(Icons.star_border): Badge(
+              label: Text('$favCount'),
+              child: Icon(Icons.star_border),
+            ),
             label: 'Favorites',
             selectedIcon: Icon(Icons.star),
           ),
